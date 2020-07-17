@@ -9,7 +9,7 @@ def single_number(arr):
     # Your code here
     no_duplicate_list = []
     for i in arr:
-        if i not in no_duplicate_list:
+        if i not in no_duplicate_list: #if we used a set instead of a list to store the duplicates, this line would execute in O(1) instead of O(n)
             no_duplicate_list.append(i)
         else:
             no_duplicate_list.remove(i)
