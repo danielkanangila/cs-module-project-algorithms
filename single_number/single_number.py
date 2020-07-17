@@ -1,11 +1,19 @@
+from functools import reduce
 '''
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
+
+
 def single_number(arr):
     # Your code here
-
-    pass
+    no_duplicate_list = []
+    for i in arr:
+        if i not in no_duplicate_list: #if we used a set instead of a list to store the duplicates, this line would execute in O(1) instead of O(n)
+            no_duplicate_list.append(i)
+        else:
+            no_duplicate_list.remove(i)
+    return no_duplicate_list.pop()
 
 
 if __name__ == '__main__':
